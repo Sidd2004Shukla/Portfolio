@@ -46,18 +46,6 @@ src/
 
 ---
 
-## ⚙️ Customize Your Portfolio
-
-Open **`src/portfolio.js`** and update:
-
-- `greeting` — your name, subtitle, GitHub and resume links
-- `skills` — your skill categories, descriptions, and software skills
-- `educationInfo` — your university and school details
-- `certifications` — your certification list
-- `publications` (used for projects) — your project cards with GitHub links
-- `contactPageData` — your contact info and profile image
-
----
 
 ## 🚀 Run Locally
 
@@ -73,23 +61,6 @@ npm start
 ```
 
 The app will open at `http://localhost:3000`
-
----
-
-## 🌐 Deploy on Vercel
-
-### Option A — GitHub Integration (Auto-deploy)
-1. Push code to a GitHub repository
-2. Go to [vercel.com](https://vercel.com) → **Add New Project**
-3. Import your GitHub repo
-4. Click **Deploy** — done!
-
-### Option B — Vercel CLI
-```bash
-npm install -g vercel
-npm run build
-vercel
-```
 
 ---
 

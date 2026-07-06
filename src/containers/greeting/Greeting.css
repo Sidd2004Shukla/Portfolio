@@ -1,0 +1,143 @@
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+.greet-main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.58), rgba(26, 26, 26, 0.78)),
+    url("../../assets/images/landing.png") center center / cover no-repeat;
+}
+
+.gretting-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+}
+
+.greeting-main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 7rem 6% 4rem;
+  box-sizing: border-box;
+}
+
+.greeting-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+.button-greeting-div {
+  display: flex;
+  margin-top: 20px;
+}
+
+.greeting-text {
+  margin-top: 0px;
+  font-size: 70px;
+  line-height: 1.1;
+  font-family: "Google Sans Bold";
+  color: #ffffff;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.55);
+}
+
+.greeting-nickname {
+  font-size: 30px;
+  line-height: 0px;
+  font-family: "Google Sans Bold Italic";
+  color: #ffc107;
+}
+
+.greeting-text-p {
+  font-size: 40px;
+  line-height: 40px;
+  margin-right: 40px;
+  font-family: "Google Sans Medium";
+  color: #ffffff;
+  max-width: 820px;
+}
+
+.greeting-image-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.greeting-image-div {
+  position: relative;
+  z-index: 1;
+}
+
+.greeting-image-div::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.24) 0%, rgba(255, 193, 7, 0.1) 36%, rgba(26, 26, 26, 0) 72%);
+  filter: blur(16px);
+  z-index: -1;
+}
+
+.greeting-image-div img {
+  display: block;
+  width: min(44vw, 560px);
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 50px;
+  }
+  .greeting-text-p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .button-greeting-div {
+    justify-content: space-around;
+  }
+  .greet-main {
+    min-height: auto;
+    background-position: center;
+  }
+  .greeting-main {
+    flex-direction: column;
+    min-height: auto;
+    padding: 6rem 1.2rem 3rem;
+    text-align: center;
+  }
+  .greeting-text {
+    font-size: 30px;
+    text-align: center;
+  }
+  .greeting-nickname {
+    font-size: 25px;
+    text-align: center;
+  }
+  .greeting-text-p {
+    font-size: 16px;
+    margin-right: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .portfolio-repo-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .greeting-image-div img {
+    width: min(88vw, 420px);
+  }
+}

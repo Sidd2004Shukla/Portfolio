@@ -2,12 +2,8 @@ import React, { Component } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
-import Education from "../pages/education/EducationComponent";
-import Contact from "../pages/contact/ContactComponent";
-import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
-import ResumePage from "../pages/resume/Resume.js";
 
 export default class Main extends Component {
   componentDidMount() {
@@ -47,27 +43,31 @@ export default class Main extends Component {
             path="/home"
             render={(props) => <Home {...props} theme={this.props.theme} />}
           />
+          <Route
+            path="/education"
+            render={(props) => (
+              <Education {...props} theme={this.props.theme} />
+            )}
+          />
+          <Route
+            path="/contact"
+            render={(props) => <Contact {...props} theme={this.props.theme} />}
+          />
+
           {settings.isSplash && (
             <Route
               path="/splash"
               render={(props) => <Splash {...props} theme={this.props.theme} />}
             />
           )}
-          <Route
-            path="/education"
-            render={(props) => <Home {...props} theme={this.props.theme} />}
-          />
+
           <Route
             path="/projects"
-            render={(props) => <Home {...props} theme={this.props.theme} />}
-          />
-          <Route
-            path="/contact"
-            render={(props) => <Home {...props} theme={this.props.theme} />}
+            render={(props) => <Projects {...props} theme={this.props.theme} />}
           />
           <Route
             path="/resume"
-            render={(props) => <Home {...props} theme={this.props.theme} />}
+            render={(props) => <ResumePage {...props} theme={this.props.theme} />}
           />
           <Route
             path="*"
